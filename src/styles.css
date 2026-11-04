@@ -1,0 +1,242 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Cinzel", "Palatino Linotype", Georgia, serif;
+  --font-body: "Alegreya", "Palatino Linotype", Georgia, serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+
+  --color-vellum: #e9dfc8;
+  --color-surface: #f4ecda;
+  --color-sunk: #e0d3b6;
+  --color-raise: #fbf6ea;
+  --color-ink: #2a2017;
+  --color-ink-2: #5a4936;
+  --color-ink-3: #675844;
+  --color-rule: #cdbb95;
+  --color-gilt: #9a7428;
+  --color-gilt-soft: #e7d6aa;
+  --color-rubric: #8e2d1e;
+  --color-verdigris: #2d6853;
+  --color-lapis: #2b4b7e;
+  --color-violet: #5c3d7a;
+  --color-copper: #8a4b2a;
+  --color-slate: #3e4a55;
+  --color-fog: #978769;
+  --color-bind: #211912;
+  --color-bind-2: #2b2118;
+  --color-bind-3: #3a2d20;
+  --color-bind-rule: #4f3e2b;
+  --color-bind-ink: #efe4cb;
+  --color-bind-ink-2: #bfac8b;
+  --color-bind-gilt: #d6b064;
+  --color-accent: #2b4b7e;
+}
+
+:root[data-theme="dark"] {
+  --color-vellum: #120f0b;
+  --color-surface: #1a1611;
+  --color-sunk: #211c15;
+  --color-raise: #241e17;
+  --color-ink: #ece1c8;
+  --color-ink-2: #c2b293;
+  --color-ink-3: #9a8b70;
+  --color-rule: #393025;
+  --color-gilt: #cfa957;
+  --color-gilt-soft: #352a19;
+  --color-rubric: #e3876e;
+  --color-verdigris: #7fc4a2;
+  --color-lapis: #94b3e6;
+  --color-fog: #6c624e;
+  --color-bind: #0c0a07;
+  --color-bind-2: #16120d;
+  --color-bind-3: #231c14;
+  --color-bind-rule: #3d3020;
+}
+
+:root[data-accent="gilt"] { --color-accent: var(--color-gilt); }
+:root[data-accent="verdigris"] { --color-accent: var(--color-verdigris); }
+:root[data-accent="lapis"] { --color-accent: var(--color-lapis); }
+:root[data-accent="rubric"] { --color-accent: var(--color-rubric); }
+:root[data-accent="violet"] { --color-accent: var(--color-violet); }
+:root[data-accent="copper"] { --color-accent: var(--color-copper); }
+:root[data-accent="slate"] { --color-accent: var(--color-slate); }
+
+@layer base {
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--color-vellum);
+    color: var(--color-ink);
+    font-family: var(--font-body);
+    font-size: 1.125rem;
+    line-height: 1.55;
+  }
+  button:not(:disabled),
+  [role="button"]:not(:disabled) { cursor: pointer; }
+  :focus-visible {
+    outline: 2px solid var(--color-gilt);
+    outline-offset: 2px;
+  }
+}
+
+a.kw {
+  color: var(--color-gilt);
+  text-decoration-line: underline;
+  text-decoration-color: var(--color-gilt);
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  background: none;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+}
+a.kw-fog {
+  color: var(--color-fog);
+  text-decoration-style: dotted;
+  text-decoration-color: var(--color-fog);
+  text-decoration-thickness: 1.5px;
+}
+a.kw-fog::after {
+  content: "?";
+  font-size: 0.62em;
+  vertical-align: super;
+  color: var(--color-fog);
+  margin-left: 1px;
+  font-weight: 700;
+  text-decoration: none;
+}
+a.kw-tome,
+a.kw-figure,
+a.kw-place {
+  text-decoration-style: double;
+}
+a.kw-active {
+  background: color-mix(in srgb, var(--color-gilt) 18%, transparent);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--color-gilt) 18%, transparent);
+}
+a.kw:hover {
+  text-decoration-thickness: 2px;
+}
+@media (max-width: 640px) {
+  a.kw,
+  a.tip-open,
+  button.act {
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+}
+
+.kw-tip {
+  position: fixed;
+  z-index: 80;
+  max-width: calc(100vw - 32px);
+  background: var(--color-bind-2);
+  color: var(--color-bind-ink);
+  border: 1px solid var(--color-bind-gilt);
+  border-radius: 2px;
+  padding: 14px 16px 10px;
+  font-size: 1rem;
+  line-height: 1.45;
+  box-shadow:
+    inset 0 0 0 3px var(--color-bind-2),
+    inset 0 0 0 4px var(--color-bind-rule),
+    0 22px 44px -14px rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.12s ease, transform 0.12s ease;
+}
+.kw-tip.show {
+  opacity: 1;
+  transform: none;
+}
+.kw-tip p {
+  margin: 0 0 8px;
+}
+.kw-tip .tip-head {
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid var(--color-bind-rule);
+}
+.kw-tip .tip-kind {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-bind-ink-2);
+}
+.kw-tip .tip-name {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.15rem;
+  line-height: 1.2;
+  color: var(--color-bind-gilt);
+}
+.kw-tip .tip-level {
+  font-family: var(--font-display);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-bind-ink-2);
+}
+.kw-tip .tip-fog {
+  font-style: italic;
+  color: var(--color-bind-ink-2);
+}
+.fogtxt {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  font-style: normal;
+}
+.kw-tip .tip-found {
+  font-size: 0.9rem;
+  color: var(--color-bind-ink-2);
+}
+.kw-tip .tip-foot {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 4px 12px;
+  align-items: baseline;
+  border-top: 1px solid var(--color-bind-rule);
+  padding-top: 8px;
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--color-bind-ink-2);
+}
+a.tip-open {
+  font-family: var(--font-display);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-bind-gilt);
+  text-decoration: none;
+  background: none;
+  border: 0;
+  padding: 0;
+}
+a.tip-open::after {
+  content: " ›";
+}
+a.tip-open:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+button.act {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  background: none;
+  border: 0;
+  padding: 0 2px;
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
