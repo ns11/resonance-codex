@@ -1,17 +1,12 @@
-# Resonance Codex 3.1.3
+# Resonance Codex
 
-Cleaned copy with sample data.
+A single-page study codex for resonance physics, written as one HTML page plus plain script files (no build step). It holds entries with derivations and quizzes, a reading shelf of tomes, a crafting bench, a hover-card tooltip layer, an optional "lamp" that hands a prompt to a language model, and an owner/viewer gate.
 
-## Overview
+This repository is a private, cleaned copy of version 3.1.3:
 
-This is a cleaned version of the Resonance Codex 3.1.3 with sample datasets and supporting files.
+- `index.html` and `codex/` are the app. Open `index.html` through any static server.
+- `checks/` holds the browser tests (Node + Playwright). `node checks/run_all.js [out folder]` runs them; the README there explains each one.
+- `codex/lores/iovu-data.js` is sample data. The owner's real campaign data is not in this repository (`codex-build/make_sample_data.js` rebuilds the sample).
+- `codex-build/` holds the generators used in the owner's private tree.
 
-## Structure
-
-- `data/sample/` - Sample resonance data files
-- `src/` - Core codex modules
-- `docs/` - Documentation
-
-## Version
-
-3.1.3 - Cleaned release
+The app text still refers to its keeper by a first name and cites physics textbooks and papers by author. Nothing here is a release: the live app stays at 3.1.3.

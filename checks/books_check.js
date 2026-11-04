@@ -1,0 +1,33 @@
+const { chromium } = require('playwright'); const fs = require('fs');
+const OUT = process.argv[2] || '/tmp';
+const MOCK = fs.readFileSync(__dirname + '/mock_claude.js', 'utf8');
+(async () => {
+  const b = await chromium.launch(); const c = await b.newContext({ viewport: { width: 1440, height: 900 } }); await c.addInitScript(MOCK); const p = await c.newPage();
+  const errs = []; p.on('pageerror', (e) => errs.push(e.message)); p.on('console', (m) => { if (m.type() === 'error') errs.push(m.text().slice(0, 160)); });
+  const out = {};
+  await p.goto('http://127.0.0.1:8765/#/library/cell-ficek', { waitUntil: 'domcontentloaded' }); await p.waitForTimeout(1500);
+  out.cell = await p.evaluate(() => ({ h1: document.querySelector('#codex-main h1').textContent, books: Array.from(document.querySelectorAll('.must-reads .book-title')).map((x) => x.textContent), open: document.querySelectorAll('.must-reads details[open]').length, rows: document.querySelectorAll('.ch-row').length }));
+  await p.screenshot({ path: OUT + '/books-ficek-cell.png', fullPage: true });
+  const row = await p.$('.ch-row[data-id]'); await row.hover(); await p.waitForTimeout(500);
+  out.tip = await p.evaluate(() => { const t = document.querySelector('.kw-tip'); return t ? { name: t.querySelector('.tip-name').textContent, kind: t.querySelector('.tip-kind').textContent, body: t.querySelector('.tip-body').innerText.replace(/\n/g, ' | ').slice(0, 300), chips: t.querySelectorAll('.chip').length } : null; });
+  const chip = await p.$('.kw-tip .chip'); if (chip) { await chip.hover(); await p.waitForTimeout(500); out.nested = await p.evaluate(() => Array.from(document.querySelectorAll('.kw-tip .tip-name')).map((n) => n.textContent)); }
+  await p.screenshot({ path: OUT + '/books-chapter-tip.png' });
+  await p.evaluate(() => { location.hash = '#/e/ch-ficek-swain-3'; }); await p.waitForTimeout(500);
+  out.chapter = await p.evaluate(() => ({ h1: document.querySelector('#codex-main h1').textContent, kind: document.querySelector('.entry-head .kind').textContent, chips: document.querySelectorAll('#codex-main .chip').length, pn: document.querySelectorAll('.pn a').length }));
+  await p.evaluate(() => { location.hash = '#/e/lvovsky'; }); await p.waitForTimeout(500);
+  out.lvovsky = await p.evaluate(() => ({ h1: document.querySelector('#codex-main h1').textContent, books: Array.from(document.querySelectorAll('.must-reads .book-title')).map((x) => x.textContent), toc: Array.from(document.querySelectorAll('.toc button')).map((x) => x.textContent), works: document.querySelectorAll('#s-works li').length }));
+  await p.evaluate(() => { location.hash = '#/library/cell-lvovsky'; }); await p.waitForTimeout(500);
+  out.lvCell = await p.evaluate(() => ({ h1: document.querySelector('#codex-main h1').textContent, roughs: document.querySelectorAll('.rough-card').length, stack: !!document.querySelector('.stack') }));
+  await p.evaluate(() => { location.hash = '#/e/scully'; }); await p.waitForTimeout(500);
+  out.scully = await p.evaluate(() => ({ books: Array.from(document.querySelectorAll('.must-reads .book-title')).map((x) => x.textContent), rows: document.querySelectorAll('.ch-row').length, firstRow: (document.querySelector('.ch-row') || {}).innerText }));
+  await p.evaluate(() => { location.hash = '#/e/cohen-tannoudji'; }); await p.waitForTimeout(500);
+  out.ct = await p.evaluate(() => ({ books: Array.from(document.querySelectorAll('.must-reads .book-title')).map((x) => x.textContent), lights: Array.from(document.querySelectorAll('.ch-lights')).slice(0, 4).map((x) => x.textContent) }));
+  await p.evaluate(() => { location.hash = '#/e/decay-rate'; }); await p.waitForTimeout(500);
+  out.noChapterLinks = await p.evaluate(() => Array.from(document.querySelectorAll('#codex-main a.kw')).filter((a) => a.dataset.id && a.dataset.id.startsWith('ch-')).length);
+  out.kwCount = await p.evaluate(() => Codex.all().filter((e) => e.kind === 'chapter').length);
+  out.home = await p.evaluate(() => { location.hash = '#/'; return null; }); await p.waitForTimeout(500);
+  out.homeCounts = await p.evaluate(() => Array.from(document.querySelectorAll('.levelbox .lb-n')).map((n) => n.textContent).join('/') + ' | idx ' + document.querySelectorAll('#codex-index .ci-row').length);
+  out.errs = errs;
+  console.log(JSON.stringify(out, null, 1));
+  await b.close();
+})();

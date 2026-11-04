@@ -1,0 +1,310 @@
+{
+ "epstein-D": {
+  "stance": "conditional",
+  "ruling": "The record reads the portal route first, because a posting, a date and a stated process are documents, and it leaves the meeting unruled, because what the recruiter and the CTO would each owe and want is not on paper.",
+  "reasons": [
+   "The lens reads every offer as a pair, an asset on one side and a debt on the other; the portal route gives a pair that can be written down, namely her file against the posting terms, while the introduction gives an asset called access whose matching debt is not stated by anyone.",
+   "By the rule of the lens, a number is read from the other side before it is read from hers; in an introduction the other side is a favour owed to the recruiter and a place in the line of the CTO, and neither has a size, a date or a currency.",
+   "The lens weighs what a unit of her own capital can carry; here the capital is hours and a reference, and a portal application spends hours on a known form, while an introduction spends a reference that cannot be spent twice.",
+   "The task is a signed contract by 31 December 2026; a portal route ends in a dated decision that can be counted back from that day, and the record shows no date at all for the fintech posting.",
+   "The lens ignores the story of a posting over its terms, so the account of an early introduction counts for less than the terms that the posting will print once it opens."
+  ],
+  "risks": [
+   "The portal route cannot be used until the posting opens, and the record gives no opening date for it, so a plan that rests on the portal rests on a date nobody has supplied.",
+   "The windows listed for the keeper close from 3 Nov 2026 onward, and time given to a posting with no date takes hours away from postings whose deadlines are written down.",
+   "An introduction made by a recruiter may leave a favour owed to the recruiter; the record does not show what it would cost, so the pair stays open on one side."
+  ],
+  "asks": [
+   "Who owes you here, and can they pay: what does the recruiter or the fintech owe you in writing, and by what date?",
+   "If this goes wrong, which side of the pair breaks first: the hours spent waiting for a posting that has not opened, or the reference spent on an introduction?"
+  ],
+  "check": [
+   "The date on which the fintech posting opens, and whether the portal accepts applications on that same day (CHECK with the recruiter or the portal).",
+   "What the recruiter is paid, and by whom, if the keeper is placed (CHECK).",
+   "Whether the fintech has any posted terms for this role, such as salary band or contract type (CHECK)."
+  ],
+  "record": "The keeper asked whether to take a recruiter-offered introduction to a fintech CTO or to apply through the portal; the reading was conditional, with the portal route read first on its documents and the introduction left unruled because its terms are not on paper.",
+  "pull": {
+   "text": "The record shows his wish pulling toward the larger counterparty, the CTO, and the ruling stayed on the documents of the portal route instead.",
+   "shown": false
+  },
+  "inner": {
+   "proposals": [
+    {
+     "agent": "task",
+     "line": "Read both routes by their documents and put the portal route first, since it can be dated toward 31 December 2026.",
+     "eyes": "professional"
+    },
+    {
+     "agent": "wish",
+     "line": "The pull is toward the route that puts the keeper before the larger counterparty, the CTO.",
+     "eyes": "tyrant"
+    },
+    {
+     "agent": "ledger",
+     "line": "Write the pair for each route: the portal gives hours against a dated decision, the introduction gives access against a favour of unknown size.",
+     "eyes": "professional"
+    },
+    {
+     "agent": "eyes",
+     "line": "Rule on the paper trail, which the other four members read as professional, and leave the person out of the reading.",
+     "eyes": "professional"
+    }
+   ],
+   "moved": [
+    "task",
+    "ledger",
+    "eyes"
+   ],
+   "adopted": [
+    "gates",
+    "fable"
+   ],
+   "dilemma": "The wish pulled toward the larger counterparty, but the task and the eyes held the ruling to documents, dates and payment terms, so the task side won and the wish stayed in the inner note."
+  }
+ },
+ "epstein-E": {
+  "stance": "conditional",
+  "ruling": "Put the Fidelity compliance work first in the CV only to the extent that its dated entries match the two areas the posting names, ICT governance and data integrity controls, and keep the engineering years directly under it.",
+  "reasons": [
+   "The lens reads a posting as a pair: the posting is an asking side, two named areas of experience, and the CV is the giving side; the stronger the match between the two lists, the smaller the gap the reader has to fill.",
+   "A reading that rests on a document, a date and a scope looks professional, so the first lines of the CV should be the ones that carry a dated role, a stated scope and a named control area.",
+   "The record shows only that the keeper has Fidelity compliance work and an engineering background; it does not show how much of that work touched ICT governance or data integrity controls, so the order of the CV has to follow what the entries can show, not the title of the work.",
+   "The lens asks what a unit of her capital can carry; the first third of a page is the scarcest unit in a CV, and it carries more when it holds the lines that the posting asks for by name.",
+   "The deadline for this posting is 5 Nov 2026, and the record gives no hour for it, so the time left for reordering the CV is a few days and each hour spent on it has a cost against the other postings."
+  ],
+  "risks": [
+   "If the compliance entries put first are wider than what the posting asks for, the reader may meet a CV whose first lines do not match the posting, and the engineering lines that match better sit below them.",
+   "Entries that state a scope larger than the documents behind them can be checked against those documents, and the gap would then count against the whole file.",
+   "A CV rewritten in a hurry before 5 Nov 2026 may carry dates that disagree with the cover letter or the diplomas."
+  ],
+  "asks": [
+   "What does each Fidelity entry show, in dated lines, about ICT governance or data integrity controls, and which documents could back each line?",
+   "What would the reader hold if the compliance work were placed second: does the posting still find its two named areas in the first third of the page?"
+  ],
+  "check": [
+   "How much of the Fidelity compliance work concerned ICT governance and data integrity controls, as against general compliance (CHECK in her own records).",
+   "The exact hour of the deadline on 5 Nov 2026 and the format in which the file must be submitted (CHECK in the posting).",
+   "Whether the posting ranks the two named areas or lists them as equal (CHECK in the posting)."
+  ],
+  "record": "The keeper asked whether to put her Fidelity compliance work first in the CV for the National Bank posting; the reading was conditional, resting on how closely the dated entries match the two areas the posting names.",
+  "pull": null,
+  "inner": {
+   "proposals": [
+    {
+     "agent": "task",
+     "line": "Rule for the order that matches the posting by its two named areas, since a clear match moves the file toward a signed contract by 31 December 2026.",
+     "eyes": "professional"
+    },
+    {
+     "agent": "wish",
+     "line": "No larger counterparty appears in this decision, so the wish proposes nothing.",
+     "eyes": "professional"
+    },
+    {
+     "agent": "ledger",
+     "line": "Read the CV as the giving side and the posting as the asking side, and count which named areas are paid for by a dated entry.",
+     "eyes": "professional"
+    },
+    {
+     "agent": "eyes",
+     "line": "Rest the ruling on dated entries and a stated scope, which the other four read as professional.",
+     "eyes": "professional"
+    }
+   ],
+   "moved": [
+    "task",
+    "ledger",
+    "eyes"
+   ],
+   "adopted": [
+    "gates",
+    "jobs"
+   ],
+   "dilemma": "The wish found no larger counterparty in a decision about the order of a CV, so the task, the pair of books and the eyes agreed and no dilemma had to be resolved."
+  }
+ },
+ "epstein-F": {
+  "stance": "unclear",
+  "ruling": "The lens reaches only the money side of the question, the fee against the date, and does not rule on hiring anyone; it asks that the pair be written down first, her payment now and the filing she needs later, with every date read as expected and none as fixed.",
+  "reasons": [
+   "The lens reads a fee as a pair: on one side an amount she would owe and a document or an answer she would hold, on the other a counterparty that is paid whether or not an offer follows; the record gives none of the amounts.",
+   "By her own account the route depends on an employer filing in March 2027, so the first debt in the chain is the employer, which would owe the filing, and no such employer appears in the record yet.",
+   "The record dates the US job track as expected only: registration is expected to open on 4 Mar 2027 and to close on 19 Mar 2027, extrapolated from the FY2027 pattern, and the FY2028 dates are not announced, so any plan must carry those dates as expected and never as fixed.",
+   "The lens asks what she would hold if she refused the spend: she would hold her savings and her time, and she would carry the risk that a later start leaves less room before the expected window; the record cannot size either side.",
+   "The lens treats the label on a debt as a decision, not a fact: a fee paid now is not good or bad credit in itself, it becomes one by what it carries toward a signed contract."
+  ],
+  "risks": [
+   "A fee paid before any offer exists is a payment with nothing yet on the other side of the pair, and it comes out of the same savings that carry the rest of the campaign.",
+   "A start after an offer arrives may leave little time before the expected window of 4 Mar 2027 to 19 Mar 2027, and the dates themselves may move.",
+   "The record shows no employer, so the whole US route rests on a counterparty that does not yet exist in the record."
+  ],
+  "asks": [
+   "What would the fee be, in what currency, and what exactly would be delivered for it before any offer exists?",
+   "If this goes wrong, which side of the pair breaks first: the savings spent early, or the time lost by waiting?"
+  ],
+  "check": [
+   "The registration dates for the next cycle, which are expected and not announced (CHECK against the official notice when it appears).",
+   "Which employer, if any, has said it would file, and in what document (CHECK).",
+   "What the fee would be and what it covers (CHECK; the record gives no figure)."
+  ],
+  "record": "The keeper asked whether to hire an immigration lawyer now or wait for an offer; the reading was unclear, because the lens reads the fee and the expected dates as a pair but does not reach the choice of an adviser.",
+  "pull": null,
+  "inner": {
+   "proposals": [
+    {
+     "agent": "task",
+     "line": "Rule only on the part a document can show, the fee and the expected dates, and keep the 31 December 2026 aim in view.",
+     "eyes": "professional"
+    },
+    {
+     "agent": "wish",
+     "line": "No larger counterparty is named in this decision, so the wish proposes nothing.",
+     "eyes": "professional"
+    },
+    {
+     "agent": "ledger",
+     "line": "Write the pair of the fee: an amount owed now against an answer held, and set the expected dates beside it.",
+     "eyes": "professional"
+    },
+    {
+     "agent": "eyes",
+     "line": "Keep the reading on payment terms and expected dates, which the other four read as professional, and do not rule on who is chosen.",
+     "eyes": "professional"
+    }
+   ],
+   "moved": [
+    "task",
+    "ledger",
+    "eyes"
+   ],
+   "adopted": [
+    "gates",
+    "fable"
+   ],
+   "dilemma": "The wish had no larger counterparty to pull toward, so the task and the eyes held the reading to the fee and the expected dates and left the choice of adviser unruled."
+  }
+ },
+ "epstein-G": {
+  "stance": "conditional",
+  "ruling": "The record does not rule the repayment clause fair or unfair from the sentence alone; it reads the clause as a pair, an advance now against a debt that stands for twelve months, and signing waits until the open terms of that debt are written in the letter.",
+  "reasons": [
+   "The lens reads an offer as a pair: the relocation advance is an asset on her side and a debt on her side at the same moment, and the clause sets how long that debt stands and what turns it into a payment.",
+   "The letter, as the keeper describes it, gives one term, repayment on leaving within 12 months, and leaves open the size of the advance, the currency, whether the debt falls month by month or stays whole until the twelfth, and what counts as leaving.",
+   "The lens asks who owes whom and until when: the company owes the advance on a given date, she owes it back on a trigger, and a trigger that fires on any exit reads very differently from one that fires only on her own choice to go.",
+   "The label on a debt is a decision, not a fact: an advance that falls by an equal amount each month is closer to good credit for her, and one that stays whole until the end of the twelfth month is a bet she places on her own stay.",
+   "The task is a signed contract by 31 December 2026, so the open terms are best settled before signature, since afterwards the pair is fixed and only her side can still be moved."
+  ],
+  "risks": [
+   "If the debt stays whole for the full twelve months, the pair is worst at the point where she would most want to leave, and the first side to break is her savings.",
+   "If the advance is paid in one currency and the repayment is fixed in another, the size of the debt in her own currency can move with the exchange rate.",
+   "If the unreadable terms are left to be settled after signing, the other party holds the only copy of the numbers that matter."
+  ],
+  "asks": [
+   "What do you owe back, in what currency, and on what exact trigger: does it fall each month, and does it fall at all if the company ends the contract?",
+   "What would you hold if you refused the advance: could the move be paid from your own savings, and what would that cost you in leverage?"
+  ],
+  "check": [
+   "The amount of the relocation advance and its currency (CHECK in the offer letter).",
+   "Whether the amount owed shrinks over the twelve months or stays whole (CHECK in the offer letter).",
+   "What events count as leaving, for example resignation only or any end of the contract (CHECK in the offer letter and the contract)."
+  ],
+  "record": "The keeper asked whether the repayment clause on a relocation advance is fair and whether to sign; the reading was conditional, with the clause read as a pair and signature held until its open terms are written down.",
+  "pull": null,
+  "inner": {
+   "proposals": [
+    {
+     "agent": "task",
+     "line": "Hold signature until the terms of the debt are on paper, so that the contract can still close before 31 December 2026.",
+     "eyes": "professional"
+    },
+    {
+     "agent": "wish",
+     "line": "The decision names no larger counterparty, so the wish proposes nothing.",
+     "eyes": "professional"
+    },
+    {
+     "agent": "ledger",
+     "line": "Read the advance as an asset and as a debt in the same line, and ask for the missing numbers on both sides.",
+     "eyes": "professional"
+    },
+    {
+     "agent": "eyes",
+     "line": "Rest the ruling on the clause, the twelve months and the payment terms, which the other four read as professional.",
+     "eyes": "professional"
+    }
+   ],
+   "moved": [
+    "task",
+    "ledger",
+    "eyes"
+   ],
+   "adopted": [
+    "gates",
+    "fable"
+   ],
+   "dilemma": "The wish found no larger counterparty to pull toward, so the task, the pair of books and the eyes agreed and no dilemma had to be resolved."
+  }
+ },
+ "epstein-H": {
+  "stance": "conditional",
+  "ruling": "The record sets the question of the founder aside, since this lens does not judge a person, and reads the two offers as pairs: the salary is a figure that can be read today, and the equity counts only once a document states the number of shares, the dates and what is owed.",
+  "reasons": [
+   "The lens reads an offer as a pair; a salary is a debt of the company to her on each pay date, with an amount, a currency and a date, and so both sides of it can be read at once.",
+   "A promise of equity, as stated, has an asset side for her and a debt side for the company, but nothing yet has a quantity, a vesting date or a price on it, so only one side of the pair exists on paper.",
+   "The lens ignores the character of a person above all, so nothing in this reading rests on the founder; it rests on whether the equity is written down and what would be held if it were refused.",
+   "The lens asks what a unit of her capital can carry; her hours and her stay carry a salary that is paid each period, and they carry equity only if the document says when it becomes hers and in what event it is worth anything.",
+   "The label on a debt is a decision: equity is good credit for her only if the document names who owes it, from what date, and to be settled in what form, and that is not in the record."
+  ],
+  "risks": [
+   "Equity in a young company is a debt that may never be paid in full, and the record does not show the company stock, its value or how many other holders stand before her.",
+   "If the salary is lowered in exchange for the equity, the part of the pair she can count is made smaller while the part she cannot count is made larger.",
+   "A change in the offer that is not put in writing leaves her without a document to read, and the pair then has an empty side."
+  ],
+  "asks": [
+   "What does the document say the company owes you, in what form, on which date, and until when, for the equity and for the salary separately?",
+   "If this goes wrong, which side of the pair breaks first: the pay you give up for the sake of the equity, or the equity itself?"
+  ],
+  "check": [
+   "The number of shares, the share of the company they represent, the vesting dates and any conditions (CHECK; none appear in the record).",
+   "The salary figure now offered and the figure a higher request would reach (CHECK in the offer).",
+   "The finances of the startup and its stage of funding (CHECK; the record gives none)."
+  ],
+  "record": "The keeper asked whether to rely on a founder's promise of equity or to ask for a higher salary instead; the reading was conditional, with the salary read as the term that is on paper and the equity counted only once its terms are written.",
+  "pull": null,
+  "inner": {
+   "proposals": [
+    {
+     "agent": "task",
+     "line": "Read the salary and the equity as two pairs and give weight to the one that is on paper, toward a signed contract by 31 December 2026.",
+     "eyes": "professional"
+    },
+    {
+     "agent": "wish",
+     "line": "No larger counterparty is named, so the wish proposes nothing.",
+     "eyes": "professional"
+    },
+    {
+     "agent": "ledger",
+     "line": "Write both sides of each offer, and mark the equity pair as having one empty side until a document fills it.",
+     "eyes": "professional"
+    },
+    {
+     "agent": "eyes",
+     "line": "Keep the reading on payment terms and dates, since a reading that rests on a person looks like a tyrant's reading and the page deletes it.",
+     "eyes": "professional"
+    }
+   ],
+   "moved": [
+    "task",
+    "ledger",
+    "eyes"
+   ],
+   "adopted": [
+    "gates",
+    "fable"
+   ],
+   "dilemma": "The wish had no larger counterparty to pull toward, so the task and the eyes kept the reading on the documents and the question of the founder was set aside."
+  }
+ }
+}
